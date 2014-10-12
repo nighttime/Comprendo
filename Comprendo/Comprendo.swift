@@ -9,6 +9,7 @@
 import Foundation
 
 // Example Usage
+// Try experimenting!
 
 //  [V]  = collection ~> {T -> V}
 //  [V]  = collection ~> {T -> V} | when {T -> Bool}
@@ -107,3 +108,4 @@ func ~> <T, K:Hashable, V> (left:[T], right:DictEntryPattern<T, K, V>) -> [K:V] 
     
     return accumulator
 }
+
