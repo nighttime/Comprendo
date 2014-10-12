@@ -1,5 +1,5 @@
 # Comprendo
-Python list comprehensions in Swift
+Python-style list comprehensions in Swift
 
 
 ## Features
