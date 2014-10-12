@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01A0AE5919EAD58400914F08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0AE5819EAD58400914F08 /* AppDelegate.swift */; };
+		01A0AE5B19EAD58400914F08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0AE5A19EAD58400914F08 /* ViewController.swift */; };
+		01A0AE5E19EAD58400914F08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A0AE5C19EAD58400914F08 /* Main.storyboard */; };
+		01A0AE6019EAD58400914F08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A0AE5F19EAD58400914F08 /* Images.xcassets */; };
+		01A0AE6319EAD58400914F08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A0AE6119EAD58400914F08 /* LaunchScreen.xib */; };
+		01A0AE6F19EAD58500914F08 /* ComprendoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0AE6E19EAD58500914F08 /* ComprendoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01A0AE6919EAD58500914F08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01A0AE4B19EAD58400914F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01A0AE5219EAD58400914F08;
+			remoteInfo = Comprendo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01A0AE5319EAD58400914F08 /* Comprendo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comprendo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A0AE5719EAD58400914F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A0AE5819EAD58400914F08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01A0AE5A19EAD58400914F08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01A0AE5D19EAD58400914F08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01A0AE5F19EAD58400914F08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01A0AE6219EAD58400914F08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		01A0AE6819EAD58500914F08 /* ComprendoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComprendoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A0AE6D19EAD58500914F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A0AE6E19EAD58500914F08 /* ComprendoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprendoTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01A0AE5019EAD58400914F08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01A0AE6519EAD58500914F08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01A0AE4A19EAD58400914F08 = {
+			isa = PBXGroup;
+			children = (
+				01A0AE5519EAD58400914F08 /* Comprendo */,
+				01A0AE6B19EAD58500914F08 /* ComprendoTests */,
+				01A0AE5419EAD58400914F08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01A0AE5419EAD58400914F08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01A0AE5319EAD58400914F08 /* Comprendo.app */,
+				01A0AE6819EAD58500914F08 /* ComprendoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01A0AE5519EAD58400914F08 /* Comprendo */ = {
+			isa = PBXGroup;
+			children = (
+				01A0AE5819EAD58400914F08 /* AppDelegate.swift */,
+				01A0AE5A19EAD58400914F08 /* ViewController.swift */,
+				01A0AE5C19EAD58400914F08 /* Main.storyboard */,
+				01A0AE5F19EAD58400914F08 /* Images.xcassets */,
+				01A0AE6119EAD58400914F08 /* LaunchScreen.xib */,
+				01A0AE5619EAD58400914F08 /* Supporting Files */,
+			);
+			path = Comprendo;
+			sourceTree = "<group>";
+		};
+		01A0AE5619EAD58400914F08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01A0AE5719EAD58400914F08 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01A0AE6B19EAD58500914F08 /* ComprendoTests */ = {
+			isa = PBXGroup;
+			children = (
+				01A0AE6E19EAD58500914F08 /* ComprendoTests.swift */,
+				01A0AE6C19EAD58500914F08 /* Supporting Files */,
+			);
+			path = ComprendoTests;
+			sourceTree = "<group>";
+		};
+		01A0AE6C19EAD58500914F08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01A0AE6D19EAD58500914F08 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01A0AE5219EAD58400914F08 /* Comprendo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01A0AE7219EAD58500914F08 /* Build configuration list for PBXNativeTarget "Comprendo" */;
+			buildPhases = (
+				01A0AE4F19EAD58400914F08 /* Sources */,
+				01A0AE5019EAD58400914F08 /* Frameworks */,
+				01A0AE5119EAD58400914F08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Comprendo;
+			productName = Comprendo;
+			productReference = 01A0AE5319EAD58400914F08 /* Comprendo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01A0AE6719EAD58500914F08 /* ComprendoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01A0AE7519EAD58500914F08 /* Build configuration list for PBXNativeTarget "ComprendoTests" */;
+			buildPhases = (
+				01A0AE6419EAD58500914F08 /* Sources */,
+				01A0AE6519EAD58500914F08 /* Frameworks */,
+				01A0AE6619EAD58500914F08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01A0AE6A19EAD58500914F08 /* PBXTargetDependency */,
+			);
+			name = ComprendoTests;
+			productName = ComprendoTests;
+			productReference = 01A0AE6819EAD58500914F08 /* ComprendoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01A0AE4B19EAD58400914F08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "nighttime software";
+				TargetAttributes = {
+					01A0AE5219EAD58400914F08 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					01A0AE6719EAD58500914F08 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 01A0AE5219EAD58400914F08;
+					};
+				};
+			};
+			buildConfigurationList = 01A0AE4E19EAD58400914F08 /* Build configuration list for PBXProject "Comprendo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01A0AE4A19EAD58400914F08;
+			productRefGroup = 01A0AE5419EAD58400914F08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01A0AE5219EAD58400914F08 /* Comprendo */,
+				01A0AE6719EAD58500914F08 /* ComprendoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01A0AE5119EAD58400914F08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A0AE5E19EAD58400914F08 /* Main.storyboard in Resources */,
+				01A0AE6319EAD58400914F08 /* LaunchScreen.xib in Resources */,
+				01A0AE6019EAD58400914F08 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01A0AE6619EAD58500914F08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01A0AE4F19EAD58400914F08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A0AE5B19EAD58400914F08 /* ViewController.swift in Sources */,
+				01A0AE5919EAD58400914F08 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01A0AE6419EAD58500914F08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A0AE6F19EAD58500914F08 /* ComprendoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01A0AE6A19EAD58500914F08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01A0AE5219EAD58400914F08 /* Comprendo */;
+			targetProxy = 01A0AE6919EAD58500914F08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01A0AE5C19EAD58400914F08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01A0AE5D19EAD58400914F08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01A0AE6119EAD58400914F08 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01A0AE6219EAD58400914F08 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01A0AE7019EAD58500914F08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01A0AE7119EAD58500914F08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01A0AE7319EAD58500914F08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Comprendo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		01A0AE7419EAD58500914F08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Comprendo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		01A0AE7619EAD58500914F08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ComprendoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comprendo.app/Comprendo";
+			};
+			name = Debug;
+		};
+		01A0AE7719EAD58500914F08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ComprendoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comprendo.app/Comprendo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01A0AE4E19EAD58400914F08 /* Build configuration list for PBXProject "Comprendo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A0AE7019EAD58500914F08 /* Debug */,
+				01A0AE7119EAD58500914F08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01A0AE7219EAD58500914F08 /* Build configuration list for PBXNativeTarget "Comprendo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A0AE7319EAD58500914F08 /* Debug */,
+				01A0AE7419EAD58500914F08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01A0AE7519EAD58500914F08 /* Build configuration list for PBXNativeTarget "ComprendoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A0AE7619EAD58500914F08 /* Debug */,
+				01A0AE7719EAD58500914F08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01A0AE4B19EAD58400914F08 /* Project object */;
+}
