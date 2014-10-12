@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019A6AB819EB03BA00260773 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		019A6AB819EB03BA00260773 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Comprendo/README.md; sourceTree = "<group>"; };
 		01A0AE5319EAD58400914F08 /* Comprendo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comprendo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A0AE5719EAD58400914F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01A0AE5819EAD58400914F08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		01A0AE4A19EAD58400914F08 = {
 			isa = PBXGroup;
 			children = (
+				019A6AB819EB03BA00260773 /* README.md */,
 				01A0AE5519EAD58400914F08 /* Comprendo */,
 				01A0AE6B19EAD58500914F08 /* ComprendoTests */,
 				01A0AE5419EAD58400914F08 /* Products */,
@@ -81,7 +82,6 @@
 		01A0AE5519EAD58400914F08 /* Comprendo */ = {
 			isa = PBXGroup;
 			children = (
-				019A6AB819EB03BA00260773 /* README.md */,
 				01A0AE5819EAD58400914F08 /* AppDelegate.swift */,
 				01A0AE5A19EAD58400914F08 /* ViewController.swift */,
 				01A0AE5C19EAD58400914F08 /* Main.storyboard */,
