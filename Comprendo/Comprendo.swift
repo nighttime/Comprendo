@@ -9,7 +9,6 @@
 import Foundation
 
 // Example Usage
-// Try experimenting!
 
 //  [V]  = collection ~> {T -> V}
 //  [V]  = collection ~> {T -> V} | when {T -> Bool}
