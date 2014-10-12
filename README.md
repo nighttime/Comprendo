@@ -12,10 +12,10 @@ Python-style list comprehensions in Swift
 Comprendo is simple.
 
 It can generate arrays:
-#### array ~> {mapping} | when {condition}
+##### array ~> {mapping} | when {condition}
 
 And also dictionaries:
-#### array ~> {key map} => {val map} | when {condition}
+##### array ~> {key map} => {val map} | when {condition}
 
 
 ## Examples
