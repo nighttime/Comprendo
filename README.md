@@ -5,7 +5,7 @@ Python-style list comprehensions in Swift
 ## Features
 * Easily produce expressive arrays and dictionaries
 * Simple, flexible semantics allow for a variety of results
-* Clean syntax allows for greater readability
+* Clean syntax leads to greater readability
 
 
 ## Usage
