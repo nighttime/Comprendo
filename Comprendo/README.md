@@ -1,17 +1,14 @@
 # Comprendo
----
 Python list comprehensions in Swift
 
 
 ## Features
----
 * Easily produce expressive arrays and dictionaries
 * Simple, flexible semantics allow for a variety of results
 * Clean syntax allows for greater readability
 
 
 ## Usage
----
 Comprendo is simple.
 
 It can generate arrays:
@@ -22,7 +19,6 @@ And also dictionaries:
 
 
 ## Examples
----
 ```swift
 let nums = [1, 2, 3, 4]
 ```
