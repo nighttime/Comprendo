@@ -37,9 +37,6 @@ struct Tests {
         
         let nums8 = (1..<5) | {$0 % 2 == 0} |> {$0 + 1}
         println(nums8)
-        
-        let nums9 = nums | {$0 < 4} | {$0 % 2 == 0} |> {$0}
-        println(nums9)
     }
     
 }
