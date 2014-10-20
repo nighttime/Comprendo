@@ -32,7 +32,6 @@ let array = nums |> {$0 + 1}
 ```
 
 
-
 To complex dictionary patterns...
 
 ```swift
@@ -40,6 +39,12 @@ let dict = nums | {$0 < 4} | {$0 % 2 == 0} |>> {$0} => {$0 + 1}
 //  dict = [2:3]
 ```
 
+
+Comprendo can now handle any sequence type!
+```swift
+let seq = enumerate(nums) | {$0.1 % 2 == 0} |> {$0.1 + 1}
+//  seq = [3, 5]
+```
 
 
 _See ComprendoExamples.swift for a variety of use cases!_
