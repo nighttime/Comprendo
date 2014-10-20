@@ -115,7 +115,3 @@ func => <T:SequenceType, K:Hashable, V> (left:PartialDictComprehension<T, K, V>,
     }
     return accum
 }
-
-func when<T:SequenceType>(clause:(T.Generator.Element) -> Bool) -> (T.Generator.Element) -> Bool {
-    return clause
-}
