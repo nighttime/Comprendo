@@ -28,7 +28,7 @@ Comprendo can scale from a simple mapping...
 
 ```swift
 let array = nums |> {$0 + 1}
-// array = [2, 3, 4, 5]
+//  array = [2, 3, 4, 5]
 ```
 
 
@@ -37,7 +37,7 @@ To complex dictionary patterns...
 
 ```swift
 let dict = nums | {$0 < 4} | {$0 % 2 == 0} |>> {$0} => {$0 + 1}
-// dict = [2:3]
+//  dict = [2:3]
 ```
 
 
