@@ -4,6 +4,7 @@ Python-style list comprehensions in Swift
 
 ## Features
 * Easily produce expressive arrays and dictionaries
+* Generate from any kind of sequence of data
 * Simple, flexible semantics allow for a variety of results
 * Clean syntax leads to greater readability
 
@@ -12,10 +13,10 @@ Python-style list comprehensions in Swift
 Comprendo is simple.
 
 It can generate arrays:
-##### array | {condition} |> {mapping}
+##### sequence | {condition} |> {mapping}
 
 And also dictionaries:
-##### array | {condition} |>> {key map} => {val map}
+##### sequence | {condition} |>> {key map} => {val map}
 
 
 ## Examples
