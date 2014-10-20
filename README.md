@@ -42,8 +42,8 @@ let dict = nums | {$0 < 4} | {$0 % 2 == 0} |>> {$0} => {$0 + 1}
 
 Comprendo can now handle any sequence type!
 ```swift
-let seq = enumerate(nums) | {$0.1 % 2 == 0} |> {$0.1 + 1}
-//  seq = [3, 5]
+let seq = enumerate(nums) | {$0.0 % 2 == 0} |> {$0.1 + 1}
+//  seq = [2, 4]
 ```
 
 
