@@ -8,103 +8,114 @@
 
 import Foundation
 
-// Example Usage
-
-//  [V]  = collection ~> {T -> V}
-//  [V]  = collection ~> {T -> V} | when {T -> Bool}
-//  [V]  = collection ~> {T -> V} | when {T -> Bool} | when {T -> Bool}
-
-// [K:V] = collection ~> {T -> K} => {T -> V}
-// [K:V] = collection ~> {T -> K} => {T -> V} | when {T -> Bool}
-// [K:V] = collection ~> {T -> K} => {T -> V} | when {T -> Bool} | when {T -> Bool}
-
 // T = Type of Collection e.g. [T]
 // K = Type of Stored Key
 // V = Type of Stored Value
 
+// [V] = collection |> {T -> V}
+// [V] = collection | when {T -> Bool} |> {T -> V}
+// [V] = collection | when {T -> Bool} | when {T -> Bool} |> {T -> V}
 
-infix operator ~> { associativity left precedence 10 }
+// T:SequenceType |> {T.Gen.Ele -> V} = [V]
+// T:SequenceType | when {T.Gen.Ele -> Bool} = ConditionedCollection
+// ConditionedCollection | when {T.Gen.Ele -> Bool} = ConditionedCollection
+// ConditionedCollection |> {T.Gen.Ele -> V} = [V]
 
-infix operator => { associativity left precedence 20 }
 
-infix operator |  { associativity left precedence 20 }
+// [K:V]  = collection |>> {T -> K} => {T -> V}
+// [K:V]  = collection | when {T -> Bool} |>> {T -> K} => {T -> V}
+// [K:V]  = collection | when {T -> Bool} | when {T -> Bool} |>> {T -> K} => {T -> V}
+
+// T:SequenceType |>> {T.Gen.Ele -> K} = PartialDictComprehension
+// PartialDictComprehension => {T.Gen.Ele -> V} = [K:V]
+// T:SequenceType | when {T.Gen.Ele -> Bool} = ConditionedCollection
+// ConditionedCollection | when {T.Gen.Ele -> Bool} = ConditionedCollection
+// ConditionedCollection |>> {T.Gen.Ele -> K} = PartialDictComprehension
 
 
-class ArrayEntryPattern<T, V> {
-    var valFunc:(T) -> (V)
-    var inclusionFuncs:[(T) -> (Bool)] = []
-    
-    init(valFunc:(T) -> (V), inclusionFunc:((T) -> (Bool))?) {
-        self.valFunc = valFunc
-        if let inc = inclusionFunc {
-            self.inclusionFuncs.append(inc)
-        }
+
+infix operator |>  { associativity left precedence 133 }
+
+infix operator |>> { associativity left precedence 133 }
+
+infix operator =>  { associativity left precedence 133 }
+
+infix operator |   { associativity left precedence 133 }
+
+
+class ConditionedCollection<T:SequenceType, V> {
+    var sequence:T
+    var inclusionFuncs:[(T.Generator.Element) -> Bool] = []
+    init(sequence:T, inclusionFunc:(T.Generator.Element) -> Bool) {
+        self.sequence = sequence
+        self.inclusionFuncs.append(inclusionFunc)
     }
 }
 
-class DictEntryPattern<T, K:Hashable, V>: ArrayEntryPattern<T, V> {
-    var keyFunc:(T) -> (K)
-    
-    init(keyFunc:(T) -> (K), valFunc:(T) -> (V), inclusionFunc:((T) -> (Bool))?) {
+class PartialDictComprehension<T:SequenceType, K:Hashable, V> {
+    var sequence:T
+    var inclusionFuncs:[(T.Generator.Element) -> Bool] = []
+    var keyFunc:(T.Generator.Element) -> K
+    init(conditionedCollection:ConditionedCollection<T, V>, keyFunc:(T.Generator.Element) -> K) {
+        self.sequence = conditionedCollection.sequence
+        self.inclusionFuncs = conditionedCollection.inclusionFuncs
         self.keyFunc = keyFunc
-        super.init(valFunc:valFunc, inclusionFunc:inclusionFunc)
+    }
+    init(collection:T, keyFunc:(T.Generator.Element) -> K) {
+        self.sequence = collection
+        self.keyFunc = keyFunc
     }
 }
 
 
-func => <T, K:Hashable, V> (left:(T) -> (K), right:(T) -> (V)) -> DictEntryPattern<T, K, V> {
-    return DictEntryPattern(keyFunc:left, valFunc:right, inclusionFunc:nil)
+func |> <T:SequenceType, V> (left:T, right:(T.Generator.Element) -> V) -> [V] {
+    return map(left, right)
 }
 
-func | <T, V> (left:(T) -> (V), right:(T) -> (Bool)) -> ArrayEntryPattern<T, V> {
-    return ArrayEntryPattern(valFunc:left, inclusionFunc:right)
-}
-
-func | <T, V> (var left:ArrayEntryPattern<T, V>, right:(T) -> (Bool)) -> ArrayEntryPattern<T, V> {
-    left.inclusionFuncs.append(right)
-    return left
-}
-
-func | <T, K:Hashable, V> (var left:DictEntryPattern<T, K, V>, right:(T) -> (Bool)) -> DictEntryPattern<T, K, V> {
-    left.inclusionFuncs.append(right)
-    return left
-}
-
-func when<T>(filter:(T) -> (Bool)) -> (T) -> (Bool) {
-    return filter
-}
-
-func ~> <T, V> (left:[T], right:(T) -> (V)) -> [V] {
-    return left.map(right)
-}
-
-func ~> <T, V> (left:[T], right:ArrayEntryPattern<T, V>) -> [V] {
-    var accumulator:[V] = []
-    
-    iter: for item in left {
-        for f in right.inclusionFuncs {
+func |> <T:SequenceType, V> (left:ConditionedCollection<T, V>, right:(T.Generator.Element) -> V) -> [V] {
+    var accum:[V] = []
+    iter: for item in left.sequence {
+        for f in left.inclusionFuncs {
             if !f(item) {
                 continue iter
             }
         }
-        accumulator.append(right.valFunc(item))
+        accum.append(right(item))
     }
-    
-    return accumulator
+    return accum
 }
 
-func ~> <T, K:Hashable, V> (left:[T], right:DictEntryPattern<T, K, V>) -> [K:V] {
-    var accumulator:[K:V] = [:]
-    
-    iter: for item in left {
-        for f in right.inclusionFuncs {
+func |>> <T:SequenceType, K:Hashable, V> (left:T, right:(T.Generator.Element) -> K) -> PartialDictComprehension<T, K, V> {
+    return PartialDictComprehension(collection:left, keyFunc:right)
+}
+
+func |>> <T:SequenceType, K:Hashable, V> (left:ConditionedCollection<T, V>, right:(T.Generator.Element) -> K) -> PartialDictComprehension<T, K, V> {
+    return PartialDictComprehension(conditionedCollection:left, keyFunc:right)
+}
+
+
+func | <T:SequenceType, V> (left:T, right:(T.Generator.Element) -> Bool) -> ConditionedCollection<T, V> {
+    return ConditionedCollection(sequence:left, inclusionFunc:right)
+}
+
+func | <T:SequenceType, V> (left:ConditionedCollection<T, V>, right:(T.Generator.Element) -> Bool) -> ConditionedCollection<T, V> {
+    left.inclusionFuncs.append(right)
+    return left
+}
+
+func => <T:SequenceType, K:Hashable, V> (left:PartialDictComprehension<T, K, V>, right:(T.Generator.Element) -> V) -> [K:V] {
+    var accum:[K:V] = [:]
+    iter: for item in left.sequence {
+        for f in left.inclusionFuncs {
             if !f(item) {
                 continue iter
             }
         }
-        accumulator[right.keyFunc(item)] = right.valFunc(item)
+        accum[left.keyFunc(item)] = right(item)
     }
-    
-    return accumulator
+    return accum
 }
 
+func when<T:SequenceType>(clause:(T.Generator.Element) -> Bool) -> (T.Generator.Element) -> Bool {
+    return clause
+}
