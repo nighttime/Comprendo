@@ -1,21 +1,21 @@
 # Comprendo
-Python list comprehensions in Swift
+Python-style list comprehensions in Swift
 
 
 ## Features
 * Easily produce expressive arrays and dictionaries
 * Simple, flexible semantics allow for a variety of results
-* Clean syntax allows for greater readability
+* Clean syntax leads to greater readability
 
 
 ## Usage
 Comprendo is simple.
 
 It can generate arrays:
-#### array ~> {mapping} | when {condition}
+##### array ~> {mapping} | when {condition}
 
 And also dictionaries:
-#### array ~> {key map} => {val map} | when {condition}
+##### array ~> {key map} => {val map} | when {condition}
 
 
 ## Examples
