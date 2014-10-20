@@ -39,3 +39,5 @@ let dict = nums | {$0 < 4} | {$0 % 2 == 0} |>> {$0} => {$0 + 1}
 ```
 
 _dict = [2:3]_
+
+_See ComprendoExamples.swift for a variety of use cases!_
