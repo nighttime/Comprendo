@@ -39,7 +39,7 @@ struct Tests {
         let nums6 = enumerate(nums) |>> {$0.1} => {$0.1 + 1}
         println(nums6)
         
-        // Conditionally print only when num is even
+        // Conditionally print only when nums[index] is even
         // Prints [1:3, 3:5]
         
         let nums7 = enumerate(nums) | {$0.1 % 2 == 0} |>> {$0.0} => {$0.1 + 1}
