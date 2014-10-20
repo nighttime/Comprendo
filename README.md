@@ -32,7 +32,7 @@ let array = nums |> {$0 + 1}
 ```
 
 
-To complex dictionary patterns...
+To complex dictionary patterns.
 
 ```swift
 let dict = nums | {$0 < 4} | {$0 % 2 == 0} |>> {$0} => {$0 + 1}
